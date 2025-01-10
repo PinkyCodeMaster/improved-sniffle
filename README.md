@@ -1,7 +1,6 @@
-
 # Next.js 15 with ShadCN UI, tRPC, Drizzle ORM, Stripe, and Clerk Authentication
 
-This is a template project that sets up a Next.js 15 app with the App Router, Tailwind CSS, ShadCN UI.
+This is a template project that sets up a Next.js 15 app with the App Router, Tailwind CSS, ShadCN UI, and dark mode support.
 
 ## Future Plans
 
@@ -17,6 +16,7 @@ The following features will be integrated in the future:
 - **Next.js 15 App Router**: Uses the App Router to manage pages and API routes.
 - **ShadCN UI**: A component library built with Tailwind CSS and Radix UI to help you quickly create beautiful UIs.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Dark Mode Support**: Full support for light and dark themes using `next-themes` and Tailwind CSS.
 
 ## Installation
 
@@ -58,6 +58,7 @@ Follow these steps to set up the project:
 ## Usage
 
 - **ShadCN UI**: Use the UI components for your app's frontend.
+- **Dark Mode**: The app supports both light and dark modes. Use the provided **theme toggle** to switch between modes.
 - **Future Features**: The upcoming releases will include full integration for **tRPC**, **Drizzle ORM**, **Stripe**, and **Clerk Authentication** to support backend logic, database operations, payments, and user authentication.
 
 ## Folder Structure
@@ -69,6 +70,11 @@ src/
     layout.tsx
     page.tsx
   components/
+    layout/
+      footer.tsx            # Footer component
+      header.tsx            # Header component
+      mode-toggle.tsx       # Mode toggle (dark/light theme)
+      theme-provider.tsx    # Theme provider for next-themes integration
     ui/
       accordion.tsx
       alert.tsx
@@ -126,6 +132,7 @@ src/
   styles/
     globals.css
 env.local.example
+
 ```
 
 ## License
