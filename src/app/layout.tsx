@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 import { ModeToggle } from "@/components/layout/mode-toggle";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
@@ -12,21 +13,23 @@ export const metadata: Metadata = {
 
 export default function root_layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className="min-h-screen bg-gray-100">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-          <ModeToggle />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body className="min-h-screen bg-gray-100">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+            <ModeToggle />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

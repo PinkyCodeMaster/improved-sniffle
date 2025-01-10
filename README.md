@@ -9,7 +9,7 @@ The following features will be integrated in the future:
 - **tRPC**: Type-safe API routes for easy backend communication.
 - **Drizzle ORM**: A lightweight ORM for interacting with your database.
 - **Stripe**: Payment processing integration for handling payments.
-- **Clerk Authentication**: Provides user authentication out of the box.
+- **Clerk Authentication**: Provides user authentication out of the box. todo customers.
 
 ## Features (Current)
 
@@ -17,6 +17,7 @@ The following features will be integrated in the future:
 - **ShadCN UI**: A component library built with Tailwind CSS and Radix UI to help you quickly create beautiful UIs.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Dark Mode Support**: Full support for light and dark themes using `next-themes` and Tailwind CSS.
+- **Clerk Authentication**: Authentication system for user sign-in and sign-up.
 
 ## Installation
 
@@ -59,16 +60,38 @@ Follow these steps to set up the project:
 
 - **ShadCN UI**: Use the UI components for your app's frontend.
 - **Dark Mode**: The app supports both light and dark modes. Use the provided **theme toggle** to switch between modes.
+- **Clerk Authentication**: Use Clerk for user authentication. Includes sign-in and sign-up components.
 - **Future Features**: The upcoming releases will include full integration for **tRPC**, **Drizzle ORM**, **Stripe**, and **Clerk Authentication** to support backend logic, database operations, payments, and user authentication.
+
+## Pages
+
+### Authentication Pages:
+- **Sign In**: `src/app/(auth)/sign-in/[[...sign-in]]/page.tsx`
+- **Sign Up**: `src/app/(auth)/sign-up/[[...sign-up]]/page.tsx`
+
+### Lobby Page:
+- **Lobby**: `src/app/(lobby)/page.tsx`
+
+### Middleware:
+- **Middleware**: `src/middleware.ts`
+
+### Environment Variables:
+- **Env Configuration**: `src/env.ts`
 
 ## Folder Structure
 
 ```
 src/
   app/
-    favicon.ico
-    layout.tsx
-    page.tsx
+    (auth)/
+      sign-in/
+        [[...sign-in]]/
+          page.tsx      # Sign-in page
+      sign-up/
+        [[...sign-up]]/
+          page.tsx      # Sign-up page
+    (lobby)/
+      page.tsx          # Lobby page
   components/
     layout/
       footer.tsx            # Footer component
@@ -131,6 +154,8 @@ src/
     utils.ts
   styles/
     globals.css
+  env.ts                # Environment configuration
+  middleware.ts         # Middleware for routing and authentication
 env.local.example
 
 ```
