@@ -1,6 +1,5 @@
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { ModeToggle } from "@/components/layout/mode-toggle";
-import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import type { Metadata } from "next";
