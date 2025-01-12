@@ -1,173 +1,29 @@
-# Next.js 15 with ShadCN UI, tRPC, Drizzle ORM, Stripe, and Clerk Authentication
+# Create T3 App
 
-This is a template project that sets up a Next.js 15 app with the App Router, Tailwind CSS, ShadCN UI, and dark mode support.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-## Future Plans
+## What's next? How do I make an app with this?
 
-The following features will be integrated in the future:
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-- **tRPC**: Type-safe API routes for easy backend communication.
-- **Drizzle ORM**: A lightweight ORM for interacting with your database.
-- **Stripe**: Payment processing integration for handling payments.
-- **Clerk Authentication**: Provides user authentication out of the box. todo customers.
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
-## Features (Current)
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
 
-- **Next.js 15 App Router**: Uses the App Router to manage pages and API routes.
-- **ShadCN UI**: A component library built with Tailwind CSS and Radix UI to help you quickly create beautiful UIs.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Dark Mode Support**: Full support for light and dark themes using `next-themes` and Tailwind CSS.
-- **Clerk Authentication**: Authentication system for user sign-in and sign-up.
+## Learn More
 
-## Installation
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-Follow these steps to set up the project:
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-1. Clone the repository:
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-    ```bash
-    git clone https://github.com/PinkyCodeMaster/improved-sniffle.git
-    cd improved-sniffle
-    ```
+## How do I deploy this?
 
-2. Install dependencies using pnpm:
-
-    ```bash
-    pnpm install
-    ```
-
-3. Set up environment variables by copying the example environment file:
-
-    ```bash
-    cp .env.example .env.local
-    ```
-
-4. Edit `.env.local` with your actual keys and settings:
-
-    ```env
-    NEXT_PUBLIC_STRIPE_PUBLIC_KEY=your-public-key
-    STRIPE_SECRET_KEY=your-secret-key
-    NEXT_PUBLIC_CLERK_FRONTEND_API=your-clerk-frontend-api
-    ```
-
-5. Run the app locally:
-
-    ```bash
-    pnpm run dev
-    ```
-
-## Usage
-
-- **ShadCN UI**: Use the UI components for your app's frontend.
-- **Dark Mode**: The app supports both light and dark modes. Use the provided **theme toggle** to switch between modes.
-- **Clerk Authentication**: Use Clerk for user authentication. Includes sign-in and sign-up components.
-- **Future Features**: The upcoming releases will include full integration for **tRPC**, **Drizzle ORM**, **Stripe**, and **Clerk Authentication** to support backend logic, database operations, payments, and user authentication.
-
-## Pages
-
-### Authentication Pages:
-- **Sign In**: `src/app/(auth)/sign-in/[[...sign-in]]/page.tsx`
-- **Sign Up**: `src/app/(auth)/sign-up/[[...sign-up]]/page.tsx`
-
-### Lobby Page:
-- **Lobby**: `src/app/(lobby)/page.tsx`
-
-### Middleware:
-- **Middleware**: `src/middleware.ts`
-
-### Environment Variables:
-- **Env Configuration**: `src/env.ts`
-
-## Folder Structure
-
-```
-src/
-  app/
-    (auth)/
-      sign-in/
-        [[...sign-in]]/
-          page.tsx      # Sign-in page
-      sign-up/
-        [[...sign-up]]/
-          page.tsx      # Sign-up page
-    (lobby)/
-      page.tsx          # Lobby page
-  components/
-    layout/
-      footer.tsx            # Footer component
-      header.tsx            # Header component
-      mode-toggle.tsx       # Mode toggle (dark/light theme)
-      theme-provider.tsx    # Theme provider for next-themes integration
-    ui/
-      accordion.tsx
-      alert.tsx
-      alert-dialog.tsx
-      button.tsx
-      aspect-ratio.tsx
-      avatar.tsx
-      badge.tsx
-      breadcrumb.tsx
-      calendar.tsx
-      card.tsx
-      carousel.tsx
-      chart.tsx
-      checkbox.tsx
-      collapsible.tsx
-      command.tsx
-      dialog.tsx
-      context-menu.tsx
-      drawer.tsx
-      dropdown-menu.tsx
-      form.tsx
-      label.tsx
-      hover-card.tsx
-      input.tsx
-      input-otp.tsx
-      menubar.tsx
-      navigation-menu.tsx
-      pagination.tsx
-      popover.tsx
-      progress.tsx
-      radio-group.tsx
-      resizable.tsx
-      scroll-area.tsx
-      select.tsx
-      separator.tsx
-      sheet.tsx
-      sidebar.tsx
-      tooltip.tsx
-      skeleton.tsx
-      slider.tsx
-      sonner.tsx
-      switch.tsx
-      table.tsx
-      tabs.tsx
-      textarea.tsx
-      toast.tsx
-      toaster.tsx
-      toggle.tsx
-      toggle-group.tsx
-  hooks/
-    use-mobile.tsx
-    use-toast.tsx
-  lib/
-    utils.ts
-  styles/
-    globals.css
-  env.ts                # Environment configuration
-  middleware.ts         # Middleware for routing and authentication
-env.local.example
-
-```
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-### Technologies Used
-
-- **Next.js 15**
-- **ShadCN UI**
-- **Tailwind CSS**
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
